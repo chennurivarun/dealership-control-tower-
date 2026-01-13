@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap"
+    rel="stylesheet">
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -35,14 +37,14 @@
       --bg-light: #f8fafc;
       --bg-dark: #0a0a0c;
     }
-    
+
     body {
       font-family: 'Inter', sans-serif;
       transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       background-color: var(--bg-light);
       color: #0f172a;
     }
-    
+
     .dark body {
       background-color: var(--bg-dark);
       color: #f1f5f9;
@@ -52,7 +54,10 @@
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       opacity: 0.03;
       pointer-events: none;
       z-index: 9999;
@@ -78,7 +83,8 @@
     .premium-card-hover {
       position: relative;
       z-index: 1;
-      transform: translateZ(0); /* Hardware acceleration */
+      transform: translateZ(0);
+      /* Hardware acceleration */
     }
 
     .premium-card-hover::before {
@@ -103,9 +109,17 @@
     }
 
     @keyframes gradient-shift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .glass:hover {
@@ -117,8 +131,17 @@
     }
 
     @keyframes pulse-calm {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.7; transform: scale(1.01); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.7;
+        transform: scale(1.01);
+      }
     }
 
     .pulse-alert {
@@ -154,40 +177,34 @@
     ::-webkit-scrollbar {
       width: 6px;
     }
+
     ::-webkit-scrollbar-track {
       background: transparent;
     }
+
     ::-webkit-scrollbar-thumb {
       background: rgba(148, 163, 184, 0.2);
       border-radius: 10px;
     }
+
     .dark ::webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.1);
     }
-    
+
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
+
     .no-scrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
   </style>
-  <script type="importmap">
-  {
-    "imports": {
-      "react": "https://esm.sh/react@^19.2.3",
-      "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-      "react/": "https://esm.sh/react@^19.2.3/",
-      "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
-      "recharts": "https://esm.sh/recharts@^3.6.0",
-      "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-      "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0"
-    }
-  }
-  </script>
 </head>
+
 <body class="overflow-x-hidden antialiased">
   <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
