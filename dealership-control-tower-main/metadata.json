@@ -1,0 +1,7 @@
+{
+  "name": "DealerTrust OS",
+  "description": "A comprehensive dealership-only platform for employee identity verification, performance reviews, and critical operations like vehicle movement, warranty, and spares management.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
